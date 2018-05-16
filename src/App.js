@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import * as firebase from "firebase";
@@ -14,13 +15,14 @@ var config = {
 };
 firebase.initializeApp(config);
 
-this.state = {
-  rooms: [],
-};
-
-this.roomsRef = this.props.firebase.database().ref("rooms");
-
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			null: null,
+		};
+	}
+
   render() {
     return (
       <div className="App">
@@ -28,10 +30,17 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Koop Chat</h1>
         </header>
+				<aside id="sidebar">
+					<div id="logo"></div>
+					<h1 id="slogan">Chat Rooms</h1>
+					<RoomList firebase={firebase} />
+					<nav>
+
+					</nav>
+				</aside>
         <span id="main">
           <p>
-            linke to RoomList Route
-            <Route path="/roomlist" component={RoomList} />
+							Stuff goes here
           </p>
         </span>
       </div>
