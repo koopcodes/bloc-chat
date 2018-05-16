@@ -1,4 +1,9 @@
-ul {
+#room-list {
 	background: #222;
 	color: white;
+		font-size: 300%;
+}
+
+li {
+
 }

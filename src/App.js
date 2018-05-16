@@ -16,12 +16,12 @@ var config = {
 firebase.initializeApp(config);
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			null: null,
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      null: null,
+    };
+  }
 
   render() {
     return (
@@ -30,19 +30,13 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Koop Chat</h1>
         </header>
-				<aside id="sidebar">
-					<div id="logo"></div>
-					<h1 id="slogan">Chat Rooms</h1>
-					<RoomList firebase={firebase} />
-					<nav>
-
-					</nav>
-				</aside>
-        <span id="main">
-          <p>
-							Stuff goes here
-          </p>
-        </span>
+        <aside id="sidebar">
+          <div id="logo" />
+          <div id="slogan">Chat Rooms</div>
+          <RoomList firebase={firebase} />
+          <nav />
+        </aside>
+        <span id="main">Stuff goes here</span>
       </div>
     );
   }
