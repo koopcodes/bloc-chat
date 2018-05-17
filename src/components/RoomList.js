@@ -29,6 +29,13 @@ class RoomList extends Component {
             </li>
           ))}
         </ul>
+				<form id="addRoomForm" action="" target="">
+    			<fieldset>
+						<legend>Create New Chat Room</legend>
+    				<input type="text" name="newRoomName" value="New Room Name" />
+    		    <input type="submit" value="+"/>
+					</fieldset>
+				</form>
       </section>
     );
   }
