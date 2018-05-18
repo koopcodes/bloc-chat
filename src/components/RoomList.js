@@ -23,10 +23,10 @@ class RoomList extends Component {
 
   componentDidMount() {
     this.roomsRef.on("child_added", snapshot => {
-      console.log(snapshot);
       const room = snapshot.val();
       room.key = snapshot.key;
       this.setState({ rooms: this.state.rooms.concat(room) });
+			if(this.state.rooms.length === 1){this.props.pickActiveRoom(room)}
     });
   }
 
@@ -48,9 +48,9 @@ class RoomList extends Component {
     return (
       <section id="room-component">
         <ul id="room-list">
-          {this.state.rooms.map((room, index) => (
-            <li key={index} className="roomname">
-              {room.name}
+          {this.state.rooms.map((room) => (
+            <li key={room.key} className={this.props.activeRoom && this.props.activeRoom.key === room.key ? 'active' : 'not-active' }>
+						<input type="button" onClick={ () => this.props.pickActiveRoom(room)} className="room-name" value= {room.name} />
             </li>
           ))}
         </ul>

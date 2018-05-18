@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
+import MessageList from "./components/MessageList.js";
 
 var config = {
   apiKey: "AIzaSyAKGIi6kUifZBMmKS5C3b7zt0d9FirZO1k",
@@ -18,12 +19,16 @@ firebase.initializeApp(config);
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      null: null,
-    };
+    this.state = { activeRoom: null };
+  }
+
+  pickActiveRoom(room) {
+		console.log(room);
+    this.setState({ activeRoom: room });
   }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -33,10 +38,10 @@ class App extends Component {
         <aside id="sidebar">
           <div id="logo" />
           <div id="slogan">Chat Rooms</div>
-          <RoomList firebase={firebase} />
+          <RoomList firebase={firebase} activeRoom={this.state.activeRoom} pickActiveRoom={this.pickActiveRoom.bind(this)} />
           <nav />
         </aside>
-        <span id="main">Stuff goes here</span>
+        <span id="main"></span>
       </div>
     );
   }
