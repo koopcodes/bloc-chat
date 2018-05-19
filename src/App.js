@@ -23,8 +23,8 @@ class App extends Component {
   }
 
   pickActiveRoom(room) {
-		console.log(room);
-    this.setState({ activeRoom: room });
+		this.setState({ activeRoom: room });
+		console.log(this.state.activeRoom + " from App.js");
   }
 
   render() {
@@ -41,7 +41,9 @@ class App extends Component {
           <RoomList firebase={firebase} activeRoom={this.state.activeRoom} pickActiveRoom={this.pickActiveRoom.bind(this)} />
           <nav />
         </aside>
-        <span id="main"></span>
+        <span id="main">
+				<MessageList firebase={firebase} activeRoom={this.state.activeRoom} />
+				</span>
       </div>
     );
   }

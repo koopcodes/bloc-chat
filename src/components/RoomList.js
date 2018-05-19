@@ -28,6 +28,7 @@ class RoomList extends Component {
       this.setState({ rooms: this.state.rooms.concat(room) });
 			if(this.state.rooms.length === 1){this.props.pickActiveRoom(room)}
     });
+		console.log(this.state.rooms + " roomlist");
   }
 
   handleChange(e) {

@@ -1,0 +1,113 @@
+{
+  "messages": {
+    "1": {
+      "content": "The man who passes the sentence should swing the sword",
+      "poster": "nstark",
+      "sentAt": 1459361875337,
+      "roomId": "1"
+    },
+    "2": {
+      "content": "Winter is coming",
+      "name": "nstark",
+      "sentAt": 1459361875337,
+      "roomId": "1"
+    },
+    "3": {
+      "content": "He who controls the Spice controls the universe",
+      "name": "theBaron",
+      "sentAt": 1459361875337,
+      "roomId": "2"
+    },
+    "4": {
+      "content": "This is what I'll do to the Duke and his family.",
+      "name": "theBaron",
+      "sentAt": 1459361875337,
+      "roomId": "2"
+    },
+    "5": {
+      "content": "I drink, and I know things",
+      "name": "theImp",
+      "sentAt": 1459361875337,
+      "roomId": "3"
+    },
+    "6": {
+      "content": "The man who passes the sentence should swing the sword",
+      "name": "theImp",
+      "sentAt": 1459361875337,
+      "roomId": "3"
+    },
+    "7": {
+      "content": "I am no ordinary woman, my dreams come true.",
+      "name": "Dany",
+      "sentAt": 1459361875337,
+      "roomId": "-LCk-0t0KHKJGmQAYdI4"
+    },
+    "8": {
+      "content": "Look at my face. It will be the last thing you see before you die",
+      "name": "Dany",
+      "sentAt": 1459361875337,
+      "roomId": "-LCk-0t0KHKJGmQAYdI4"
+    },
+    "9": {
+      "content": "The Spice must flow",
+      "name": "Muad'Dib",
+      "sentAt": 1459361875337,
+      "roomId": "-LCk-4eZTavuMR7Xq-H2"
+    },
+    "10": {
+      "content": "Fear is the mind killer",
+      "name": "Muad'Dib",
+      "sentAt": 1459361875337,
+      "roomId": "-LCk-4eZTavuMR7Xq-H2"
+    }
+  },
+  "rooms": {
+    "1": {
+      "name": "House Stark"
+    },
+    "2": {
+      "name": "House Targaryen"
+    },
+    "3": {
+      "name": "House Lannister"
+    },
+    "-LCk-0t0KHKJGmQAYdI4": {
+      "name": "House Atreides"
+    },
+    "-LCk-4eZTavuMR7Xq-H2": {
+      "name": "House Harkonnen"
+    }
+  },
+  "users": {
+    "Dany": {
+      "groups": {
+        "House Targaryen": true
+      },
+      "name": "Daenerys Targaryen"
+    },
+    "nstark": {
+      "groups": {
+        "House Stark": true
+      },
+      "name": "Ned Stark"
+    },
+    "theBaron": {
+      "groups": {
+        "House Harkonnen": true
+      },
+      "name": "Baron Harkonnen"
+    },
+    "theImp": {
+      "groups": {
+        "House Lannister": true
+      },
+      "name": "Tyrion Lannister"
+    },
+    "‎Muad'Dib": {
+      "groups": {
+        "House Atreides": true
+      },
+      "name": "Paul Atreides"
+    }
+  }
+}
