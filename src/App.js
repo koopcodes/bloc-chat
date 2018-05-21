@@ -23,7 +23,6 @@ class App extends Component {
 
   pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
-		console.log(room + " activeRoom from App.js");
   }
 
   render() {

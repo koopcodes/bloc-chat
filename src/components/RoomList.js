@@ -21,12 +21,12 @@ class RoomList extends Component {
 	}
 
 	addNewRoom(newRoomName) {
-		if (this.validateRoomName(this.state.newRoomName)) {
+		if (this.validateRoomName(newRoomName)) {
 			this.roomsRef.push({
-				name: this.state.newRoomName,
-				createdOn: Date(),
+				name: newRoomName,
+				createdOn: Date.now(),
 				createdBy: "username TBI"
-				});
+			});
 			this.setState({ newRoomName: "" });
 		}
 	}

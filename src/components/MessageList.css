@@ -1,0 +1,28 @@
+#message-component {
+	display: grid;
+}
+
+.user-name {
+	float: left;
+}
+
+.sentAt {
+	float: right;
+}
+
+.content {
+	width: 100%;
+}
+
+table, tbody, th, tr, td {
+	border-style: double;
+}
+
+caption {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+th {
+	background-color: silver;
+}
