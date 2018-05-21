@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import * as firebase from "firebase";
@@ -24,7 +23,7 @@ class App extends Component {
 
   pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
-		console.log(this.state.activeRoom + " from App.js");
+		console.log(room + " activeRoom from App.js");
   }
 
   render() {
