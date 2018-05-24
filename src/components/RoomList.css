@@ -6,12 +6,13 @@
 }
 
 input[type="button"] {
+	width: 100%;
   color: #222;
   display: inline-block;
-  font: 2.4em Consolas, sans-serif;
-  font-size: 70%;
+  font: Consolas, sans-serif;
+  font-size: 50%;
   padding: 14px;
-  /* background: url(overlay.png) repeat-x center #ffcc00; */
+  /* background: url('./../img/defaultUser100.png') repeat-x center #ffcc00; */
   background-color: #FFFFFF;
   border: 1px solid #222;
   -moz-border-radius: 10px;
@@ -30,6 +31,6 @@ input[type="button"]:hover {
 }
 
 .active {
-	background-color: red;
-	color: yellow;
+	background-color: #222;
+	color:rgba(49, 177, 252, 0.8);;
 }

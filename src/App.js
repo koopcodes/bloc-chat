@@ -4,7 +4,7 @@ import "./App.css";
 import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
 import MessageList from "./components/MessageList.js";
-import User from "./components/User.jsx";
+import User from "./components/User.js";
 
 var config = {
 	apiKey: "AIzaSyAKGIi6kUifZBMmKS5C3b7zt0d9FirZO1k",
@@ -21,25 +21,31 @@ class App extends Component {
 		super(props);
 		this.state = {
 			activeRoom: null,
-			username: null,
+			user: null,
 		};
 	}
 
 	pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
+		const userRef = firebase.database().ref("presence/" + this.state.user.uid);
+		const roomKey = room === "" ? "" : room.key;
+		const roomName = room === "" ? "" : room.name;
+		userRef.update({currentRoom: roomKey, name: roomName});
 	}
 
+
 	setUser(user) {
-		this.setState({ username: user });
+		this.setState({ user: user });
 	}
 
 	render() {
+
 		return (
 			<div className="App">
-				<nav id="main">
-					<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
-				</nav>
 				<header className="App-header">
+					<span id="user">
+						<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
+					</span>
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Koop Chat</h1>
 				</header>
@@ -50,6 +56,7 @@ class App extends Component {
 						firebase={firebase}
 						activeRoom={this.state.activeRoom}
 						pickActiveRoom={this.pickActiveRoom.bind(this)}
+						user={this.state.user }
 					/>
 					<nav />
 				</aside>

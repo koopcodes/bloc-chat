@@ -1,5 +1,6 @@
 #message-component {
 	display: grid;
+	background: rgba(49, 177, 252, 0.8);
 }
 
 .user-name {

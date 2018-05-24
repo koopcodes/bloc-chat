@@ -93,31 +93,36 @@
       "groups": {
         "House Targaryen": true
       },
-      "fullname": "Daenerys Targaryen"
+      "fullname": "Daenerys Targaryen",
+			"email": "stormborn@dragonsreach.org"
     },
     "nstark": {
       "groups": {
         "House Stark": true
       },
-      "fullname": "Ned Stark"
+      "fullname": "Ned Stark",
+			"email": "neddardS@winterfell.org"
     },
     "theBaron": {
       "groups": {
         "House Harkonnen": true
       },
-      "fullname": "Baron Harkonnen"
+      "fullname": "Baron Harkonnen",
+			"email": "Vladimir@giediprime.com"
     },
     "theImp": {
       "groups": {
         "House Lannister": true
       },
-      "fullname": "Tyrion Lannister"
+      "fullname": "Tyrion Lannister",
+			"email": "halfman@casterlyrock.com"
     },
     "‎Muad'Dib": {
       "groups": {
         "House Atreides": true
       },
-      "fullname": "Paul Atreides"
+      "fullname": "Paul Atreides",
+			"email": "usul@arrakis.org"
     }
   }
 }
