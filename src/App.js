@@ -27,10 +27,6 @@ class App extends Component {
 
 	pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
-		const userRef = firebase.database().ref("presence/" + this.state.user.uid);
-		const roomKey = room === "" ? "" : room.key;
-		const roomName = room === "" ? "" : room.name;
-		userRef.update({currentRoom: roomKey, name: roomName});
 	}
 
 
