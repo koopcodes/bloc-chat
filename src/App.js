@@ -29,7 +29,6 @@ class App extends Component {
 		this.setState({ activeRoom: room });
 	}
 
-
 	setUser(user) {
 		this.setState({ user: user });
 	}
@@ -57,7 +56,7 @@ class App extends Component {
 					<nav />
 				</aside>
 				<span id="main">
-					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} />
+					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} user={this.state.user} />
 				</span>
 			</div>
 		);

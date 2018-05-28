@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import "./RoomList.css";
+import React, { Component } from 'react';
+import './RoomList.css';
 
 class RoomList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			rooms: [],
-			newRoomName: "",
+			newRoomName: '',
 		};
-		this.roomsRef = this.props.firebase.database().ref("rooms");
+		this.roomsRef = this.props.firebase.database().ref('rooms');
 	}
 
 	componentDidMount() {
-		this.roomsRef.on("child_added", snapshot => {
+		this.roomsRef.on('child_added', snapshot => {
 			const room = snapshot.val();
 			room.key = snapshot.key;
 			this.setState({ rooms: this.state.rooms.concat(room) });
@@ -25,9 +25,9 @@ class RoomList extends Component {
 			this.roomsRef.push({
 				name: newRoomName,
 				createdOn: Date.now(),
-				createdBy: "username TBI"
+				createdBy: 'username TBI'
 			});
-			this.setState({ newRoomName: "" });
+			this.setState({ newRoomName: '' });
 		}
 	}
 
@@ -50,7 +50,7 @@ class RoomList extends Component {
 			<section id="room-component">
 				<ul id="room-list">
 					{this.state.rooms.map((room) => (
-						<li key={room.key} className={this.props.activeRoom && this.props.activeRoom.key === room.key ? "active" : "not-active" }>
+						<li key={room.key} className={this.props.activeRoom && this.props.activeRoom.key === room.key ? 'active' : 'not-active' }>
 							<input type="button" onClick={ () => this.props.pickActiveRoom(room)} className="room-name" value= {room.name} />
 						</li>
 					))}

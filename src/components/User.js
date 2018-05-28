@@ -11,16 +11,6 @@ class User extends Component {
 	componentDidMount() {
 		this.props.firebase.auth().onAuthStateChanged(user => {
 			this.props.setUser(user);
-			const isOnline = this.props.firebase.database().ref('.info/connected');
-			if (user) {
-				const userRef = this.props.database().ref('presence/' + user.uid);
-				isOnline.on('value', snapshot => {
-					if (snapshot.val()) {
-						userRef.update({ user: user.displayName, isOnline: true });
-						userRef.onDisconnect().update({ isOnline: false, activeRoom: '' });
-					}
-				});
-			}
 		});
 	}
 
@@ -33,12 +23,6 @@ class User extends Component {
 	}
 
 	signOut() {
-		this.props.firebase.auth().onAuthStateChanged(user => {
-			if (user !== null) {
-				const userRef = this.props.firebase.database().ref('presence/' + user.uid);
-				userRef.update({isOnline: false, activeRoom: '', roomName: ''});
-			}
-		});
 		this.props.firebase.auth().signOut().then(() => {
 			this.props.setUser(null);
 		});
@@ -50,11 +34,11 @@ class User extends Component {
 				<p id="avatar">
 					<img src={this.props.user ? this.props.user.photoURL : defaultUserImage} alt="user" />
 				</p>
-				<p id="user-name">{this.props.user ? this.props.user.displayName.split(' ')[0] : 'Guest'}</p>
+				<p id="user-name">{this.props.user ? 'Welcome ' + this.props.user.displayName.split(' ')[0] + '!' : 'Guest'}</p>
 				<p id="sign-in-out">
 					<input
 						type="button"
-						value={this.props.user ? 'Sign Out' : 'Sign In'}
+						value={this.props.user ? 'Sign Out' : 'Please Sign In'}
 						onClick={this.props.user ? this.signOut : this.signIn }
 					/>
 				</p>
