@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './RoomList.css';
+import defaultUserImage from './../img/defaultUser100.png';
 
 class RoomList extends Component {
 	constructor(props) {
@@ -10,6 +11,8 @@ class RoomList extends Component {
 		};
 		this.roomsRef = this.props.firebase.database().ref('rooms');
 	}
+
+
 
 	componentDidMount() {
 		this.roomsRef.on('child_added', snapshot => {
@@ -24,8 +27,13 @@ class RoomList extends Component {
 		if (this.validateRoomName(newRoomName)) {
 			this.roomsRef.push({
 				name: newRoomName,
-				createdOn: Date.now(),
-				createdBy: 'username TBI'
+				createdOn: Date(),
+				roomId: this.props.activeRoom.key,
+				creator: this.props.user ? this.props.user.displayName : 'Anonymous',
+				email: this.props.user ? this.props.user.email : '',
+				displayName: this.props.user ? this.props.user.displayName : 'Anonymous',
+				photoURL: this.props.user ? this.props.user.photoURL : defaultUserImage,
+
 			});
 			this.setState({ newRoomName: '' });
 		}

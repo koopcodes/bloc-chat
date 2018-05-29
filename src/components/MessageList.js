@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './MessageList.css';
-import defaultUserImage from './../img/defaultUser.png';
+import defaultUserImage from './../img/defaultUser100.png';
 
 class MessageList extends Component {
 	constructor(props) {
@@ -14,8 +14,11 @@ class MessageList extends Component {
 	}
 
 	activeRoomMessages(activeRoom) {
-		if (!activeRoom) { return; }
-		this.setState({ activeRoomMessages: this.state.messages.filter( message => message.roomId === activeRoom.key ) }, () => this.scrollToBottom() );
+		if (!activeRoom) {return;}
+		this.setState(
+			{ activeRoomMessages: this.state.messages.filter(message => message.roomId === activeRoom.key) },
+			() => this.scrollToBottom()
+		);
 	}
 
 	componentDidMount() {
@@ -38,27 +41,26 @@ class MessageList extends Component {
 		this.activeRoomMessages(nextProps.activeRoom);
 	}
 
-	scrollToBottom() {
-		this.bottomOfMessages.scrollIntoView();
-	}
-
-	createMessage() {
-		if (!this.props.activeRoom || !this.state.newMessageText) {
-			return;
-		}
+	createMessage(newMessageText) {
+		if (!this.props.activeRoom || !newMessageText) { return; }
 		this.messagesRef.push({
-			content: this.state.newMessageText,
-			sentAt: Date.now(),
+			content: newMessageText,
+			sentAt: Date(),
 			roomId: this.props.activeRoom.key,
-			username: this.props.user
-				? { email: this.props.user.email, displayName: this.props.user.displayName, photoURL: this.props.user.photoURL }
-				: { email: null, displayName: 'Guest', photoURL: defaultUserImage },
+			username: this.props.user ? this.props.user.displayName : 'Anonymous',
+			email: this.props.user ? this.props.user.email : '',
+			displayName: this.props.user ? this.props.user.displayName : 'Anonymous',
+			photoURL: this.props.user ? this.props.user.photoURL : defaultUserImage,
 		});
 		this.setState({ newMessageText: '' });
 	}
 
 	handleChange(event) {
-		this.setState({ newMessageText: event.target.value });
+		this.setState({newMessageText: event.target.value });
+	}
+
+	scrollToBottom() {
+		this.bottomOfMessages.scrollIntoView();
 	}
 
 	removeMessage(room) {
@@ -77,13 +79,18 @@ class MessageList extends Component {
 					</tr>
 					{this.state.activeRoomMessages.map(message => (
 						<tr key={message.key}>
-							<td className="user-name">{message.username}</td>
-							<td className="content">{message.content}</td>
+							<td className="user-name">
+								<img src={ message.photoURL ? message.photoURL : defaultUserImage } alt="user" />{message.username ? message.username : 'Anonymous' }</td>
+							<td className='content'>{message.content} </td>
 							<td className="sentAt">{message.sentAt}</td>
 						</tr>
 					))}
-					<div ref={thisDiv => (this.bottomOfMessages = thisDiv)} />
 				</tbody>
+				<form id="create-message" onSubmit={ (e) => { e.preventDefault(); this.createMessage(this.state.newMessageText); } }>
+					<input type="textarea" value={ this.state.newMessageText } onChange={ this.handleChange.bind(this) }  name="newMessageText" placeholder="Say something" id='message-box' />
+					<input type='submit' id='message-submit'/>
+				</form>
+				<div ref={thisDiv => (this.bottomOfMessages = thisDiv)} />
 			</table>
 		);
 	}
