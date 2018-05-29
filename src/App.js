@@ -27,10 +27,10 @@ class App extends Component {
 
 	pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
-		const userRef = firebase.database().ref("presence/" + this.state.user.uid);
-		const roomKey = room === "" ? "" : room.key;
-		const roomName = room === "" ? "" : room.name;
-		userRef.update({currentRoom: roomKey, name: roomName});
+		// const userRef = firebase.database().ref("presence/" + this.state.user.uid);
+		// const roomKey = room === "" ? "" : room.key;
+		// const roomName = room === "" ? "" : room.name;
+		// userRef.update({currentRoom: roomKey, name: roomName});
 	}
 
 
@@ -61,7 +61,7 @@ class App extends Component {
 					<nav />
 				</aside>
 				<span id="main">
-					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} />
+					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} user={this.state.user} />
 				</span>
 			</div>
 		);

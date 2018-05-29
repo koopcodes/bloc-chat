@@ -27,3 +27,34 @@ caption {
 th {
 	background-color: silver;
 }
+
+input[type=textarea] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    /* background-image: url('./../img/_ionicons_svg_md-chatboxes.svg'); */
+    /* background-position: 10px 10px; */
+    /* background-repeat: no-repeat; */
+    padding: 12px 10px 12px 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=textarea]:focus {
+    width: 95%;
+}
+
+#message-submit {
+	border-radius: 4px;
+	font-size: 16px;
+	height: 44px;
+	margin-left: 10px;
+}
+
+#create-message {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

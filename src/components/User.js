@@ -11,16 +11,6 @@ class User extends Component {
 	componentDidMount() {
 		this.props.firebase.auth().onAuthStateChanged(user => {
 			this.props.setUser(user);
-			const isOnline = this.props.firebase.database().ref('.info/connected');
-			if (user) {
-				const userRef = this.props.database().ref('presence/' + user.uid);
-				isOnline.on('value', snapshot => {
-					if (snapshot.val()) {
-						userRef.update({ user: user.displayName, isOnline: true });
-						userRef.onDisconnect().update({ isOnline: false, activeRoom: '' });
-					}
-				});
-			}
 		});
 	}
 
@@ -33,12 +23,6 @@ class User extends Component {
 	}
 
 	signOut() {
-		this.props.firebase.auth().onAuthStateChanged(user => {
-			if (user !== null) {
-				const userRef = this.props.firebase.database().ref('presence/' + user.uid);
-				userRef.update({isOnline: false, activeRoom: '', roomName: ''});
-			}
-		});
 		this.props.firebase.auth().signOut().then(() => {
 			this.props.setUser(null);
 		});
