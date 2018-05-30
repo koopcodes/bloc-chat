@@ -1,128 +1,289 @@
 {
-  "messages": {
-    "1": {
-      "content": "The man who passes the sentence should swing the sword",
-      "username": "nstark",
-      "sentAt": 1459361875337,
-      "roomId": "1"
+  "messages" : {
+    "1" : {
+      "content" : "The man who passes the sentence should swing the sword",
+      "photoURL" : "./Eddard_100.jpg",
+      "roomId" : "1",
+      "sentAt" : 1459361875337,
+      "username" : "nstark"
     },
-    "2": {
-      "content": "Winter is coming",
-      "username": "nstark",
-      "sentAt": 1459361875337,
-      "roomId": "1"
+    "2" : {
+      "content" : "Winter is coming",
+      "photoURL" : "./Eddard_100.jpg",
+      "roomId" : "1",
+      "sentAt" : 1459361875337,
+      "username" : "nstark"
     },
-    "3": {
-      "content": "He who controls the Spice controls the universe",
-      "username": "theBaron",
-      "sentAt": 1459361875337,
-      "roomId": "-LCk-4eZTavuMR7Xq-H2"
+    "3" : {
+      "content" : "He who controls the Spice controls the universe",
+      "photoURL" : "./maxresdefault.jpg",
+      "roomId" : "-LCk-4eZTavuMR7Xq-H2",
+      "sentAt" : 1459361875337,
+      "username" : "theBaron"
     },
-    "4": {
-      "content": "This is what I'll do to the Duke and his family.",
-      "username": "theBaron",
-      "sentAt": 1459361875337,
-      "roomId": "-LCk-4eZTavuMR7Xq-H2"
+    "4" : {
+      "content" : "This is what I'll do to the Duke and his family.",
+      "photoURL" : "./maxresdefault.jpg",
+      "roomId" : "-LCk-4eZTavuMR7Xq-H2",
+      "sentAt" : 1459361875337,
+      "username" : "theBaron"
     },
-    "5": {
-      "content": "I drink, and I know things",
-      "username": "theImp",
-      "sentAt": 1459361875337,
-      "roomId": "3"
+    "5" : {
+      "content" : "I drink, and I know things",
+      "photoURL" : "./tyrion100.jpg",
+      "roomId" : "3",
+      "sentAt" : 1459361875337,
+      "username" : "theImp"
     },
-    "6": {
-      "content": "The man who passes the sentence should swing the sword",
-      "username": "theImp",
-      "sentAt": 1459361875337,
-      "roomId": "3"
+    "6" : {
+      "content" : "A mind needs books like a sword needs a sharpening stone",
+      "photoURL" : "./tyrion100.jpg",
+      "roomId" : "3",
+      "sentAt" : 1459361875337,
+      "username" : "theImp"
     },
-    "7": {
-      "content": "I am no ordinary woman, my dreams come true.",
-      "username": "Dany",
-      "sentAt": 1459361875337,
-      "roomId": "2"
+    "7" : {
+      "content" : "I am no ordinary woman, my dreams come true.",
+      "photoURL" : "./Daenerys_Dragonpit.jpg",
+      "roomId" : "2",
+      "sentAt" : 1459361875337,
+      "username" : "Dany"
     },
-    "8": {
-      "content": "Look at my face. It will be the last thing you see before you die",
-      "username": "Dany",
-      "sentAt": 1459361875337,
-      "roomId": "2"
+    "8" : {
+      "content" : "Look at my face. It will be the last thing you see before you die",
+      "photoURL" : "./Daenerys_Dragonpit.jpg",
+      "roomId" : "2",
+      "sentAt" : 1459361875337,
+      "username" : "Dany"
     },
-    "9": {
-      "content": "The Spice must flow",
-      "username": "Muad'Dib",
-      "sentAt": 1459361875337,
-      "roomId": "-LCk-0t0KHKJGmQAYdI4"
+    "9" : {
+      "content" : "The Spice must flow",
+      "photoURL" : "./paul.jpg",
+      "roomId" : "-LCk-0t0KHKJGmQAYdI4",
+      "sentAt" : 1459361875337,
+      "username" : "Muad'Dib"
     },
-    "10": {
-      "content": "Fear is the mind killer",
-      "username": "Muad'Dib",
-      "sentAt": 1459361875337,
-      "roomId": "-LCk-0t0KHKJGmQAYdI4"
+    "10" : {
+      "content" : "Fear is the mind killer",
+      "photoURL" : "./paul.jpg",
+      "roomId" : "-LCk-0t0KHKJGmQAYdI4",
+      "sentAt" : 1459361875337,
+      "username" : "Muad'Dib"
+    },
+    "-LDcq9ORv02yFw8k6-7Z" : {
+      "content" : "Is Dave here?",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "1",
+      "sentAt" : "Mon May 28 2018 15:22:42 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdC9MXXyfENpX6a2NI" : {
+      "content" : "Is this thing on?",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "2",
+      "sentAt" : "Mon May 28 2018 17:03:11 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdCLda3PaxoWctCn4U" : {
+      "content" : "Tyrion rocks",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "3",
+      "sentAt" : "Mon May 28 2018 17:04:02 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdCY_aBuorLd-4ENY7" : {
+      "content" : "Fedykin kick ass on Saudukar",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "-LCk-0t0KHKJGmQAYdI4",
+      "sentAt" : "Mon May 28 2018 17:04:55 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdCg3k4B8ITgxFcy-r" : {
+      "content" : "Have you tried clearasil? ",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "-LCk-4eZTavuMR7Xq-H2",
+      "sentAt" : "Mon May 28 2018 17:05:30 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdHcL3NYTQ-XLA05ze" : {
+      "content" : "No, he left",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "1",
+      "sentAt" : "Mon May 28 2018 17:27:05 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdHo2_UA5rHVrhDpp3" : {
+      "content" : "Are U sure?",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "1",
+      "sentAt" : "Mon May 28 2018 17:27:53 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdHqL5sPKUKoRcgeQI" : {
+      "content" : "Yeppers",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "1",
+      "sentAt" : "Mon May 28 2018 17:28:02 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdJap3WxkZwOiHF-N4" : {
+      "content" : "Absolutely",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "2",
+      "sentAt" : "Mon May 28 2018 17:35:43 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdJkTcC3p-l0Ortqp2" : {
+      "content" : "Yes he does",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "3",
+      "sentAt" : "Mon May 28 2018 17:36:23 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdJvj8ZwZ16js_B-mw" : {
+      "content" : "Do you mean Fedaykin?",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "-LCk-0t0KHKJGmQAYdI4",
+      "sentAt" : "Mon May 28 2018 17:37:09 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdK469yUwON-0McR7p" : {
+      "content" : "It's a curse from the Bene Gesserit",
+      "displayName" : "Anonymous",
+      "email" : "",
+      "photoURL" : "data:image/png;base64,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",
+      "roomId" : "-LCk-4eZTavuMR7Xq-H2",
+      "sentAt" : "Mon May 28 2018 17:37:47 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Anonymous"
+    },
+    "-LDdKB84WyO7-tc5VzMz" : {
+      "content" : "You don't say!",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "-LCk-4eZTavuMR7Xq-H2",
+      "sentAt" : "Mon May 28 2018 17:38:16 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
+    },
+    "-LDdKRkfCDfvud5tyxw3" : {
+      "content" : "Yes, and Sardaukar",
+      "displayName" : "Koop Kupras",
+      "email" : "thinking.bear@gmail.com",
+      "photoURL" : "https://lh5.googleusercontent.com/-nD129RSaez4/AAAAAAAAAAI/AAAAAAABiOQ/Bmrf2s_1nYI/photo.jpg",
+      "roomId" : "-LCk-0t0KHKJGmQAYdI4",
+      "sentAt" : "Mon May 28 2018 17:39:24 GMT-0700 (Pacific Daylight Time)",
+      "username" : "Koop Kupras"
     }
   },
-  "rooms": {
-    "1": {
-      "name": "House Stark",
-			"createdOn" : 1459361875337,
-			"createdBy" : "nstark"
+  "rooms" : {
+    "1" : {
+      "createdBy" : "nstark",
+      "createdOn" : 1459361875337,
+      "name" : "House Stark"
     },
-    "2": {
-      "name": "House Targaryen",
-			"createdOn" : 1459361875337,
-			"createdBy" : "Dany"
+    "2" : {
+      "createdBy" : "Dany",
+      "createdOn" : 1459361875337,
+      "name" : "House Targaryen"
     },
-    "3": {
-      "name": "House Lannister",
-			"createdOn" : 1459361875337,
-			"createdBy" : "theImp"
+    "3" : {
+      "createdBy" : "theImp",
+      "createdOn" : 1459361875337,
+      "name" : "House Lannister"
     },
-    "-LCk-0t0KHKJGmQAYdI4": {
-      "name": "House Atreides",
-			"createdOn" : 1459361875337,
-			"createdBy" : "‎Muad'Dib"
+    "-LCk-0t0KHKJGmQAYdI4" : {
+      "createdBy" : "‎Muad'Dib",
+      "createdOn" : 1459361875337,
+      "name" : "House Atreides"
     },
-    "-LCk-4eZTavuMR7Xq-H2": {
-      "name": "House Harkonnen",
-			"createdOn" : 1459361875337,
-			"createdBy" : "theBaron"
+    "-LCk-4eZTavuMR7Xq-H2" : {
+      "createdBy" : "theBaron",
+      "createdOn" : 1459361875337,
+      "name" : "House Harkonnen"
     }
   },
-  "users": {
-    "Dany": {
-      "groups": {
-        "House Targaryen": true
+  "users" : {
+    "Dany" : {
+      "displayName" : "Dany",
+      "email" : "stormborn@dragonsreach.org",
+      "fullname" : "Daenerys Targaryen",
+      "groups" : {
+        "House Targaryen" : true,
+        "admin" : true
       },
-      "fullname": "Daenerys Targaryen",
-			"email": "stormborn@dragonsreach.org"
+      "lastLogin" : "Mon May 28 2018 17:39:24 GMT-0700",
+      "photoURL" : "./Daenerys_Dragonpit.jpg",
+      "username" : "Dany"
     },
-    "nstark": {
-      "groups": {
-        "House Stark": true
+    "nstark" : {
+      "displayName" : "nstark",
+      "email" : "neddardS@winterfell.org",
+      "fullname" : "Ned Stark",
+      "groups" : {
+        "House Stark" : true,
+        "admin" : true
       },
-      "fullname": "Ned Stark",
-			"email": "neddardS@winterfell.org"
+      "lastLogin" : "Mon May 28 2018 17:39:24 GMT-0700",
+      "photoURL" : "./Eddard_100.jpg'",
+      "username" : "nstark"
     },
-    "theBaron": {
-      "groups": {
-        "House Harkonnen": true
+    "theBaron" : {
+      "displayName" : "theBaron",
+      "email" : "Vladimir@giediprime.com",
+      "fullname" : "Baron Harkonnen",
+      "groups" : {
+        "House Harkonnen" : true,
+        "admin" : true
       },
-      "fullname": "Baron Harkonnen",
-			"email": "Vladimir@giediprime.com"
+      "lastLogin" : "Mon May 28 2018 17:39:24 GMT-0700",
+      "photoURL" : "./maxresdefault.jpg",
+      "username" : "theBaron"
     },
-    "theImp": {
-      "groups": {
-        "House Lannister": true
+    "theImp" : {
+      "displayName" : "theImp",
+      "email" : "halfman@casterlyrock.com",
+      "fullname" : "Tyrion Lannister",
+      "groups" : {
+        "House Lannister" : true,
+        "admin" : true
       },
-      "fullname": "Tyrion Lannister",
-			"email": "halfman@casterlyrock.com"
+      "lastLogin" : "Mon May 28 2018 17:39:24 GMT-0700",
+      "photoURL" : "./tyrion100.jpg",
+      "username" : "theImp"
     },
-    "‎Muad'Dib": {
-      "groups": {
-        "House Atreides": true
+    "‎Muad'Dib" : {
+      "displayName" : "Muad'Dib",
+      "email" : "usul@arrakis.org",
+      "fullname" : "Paul Atreides",
+      "groups" : {
+        "House Atreides" : true,
+        "admin" : true
       },
-      "fullname": "Paul Atreides",
-			"email": "usul@arrakis.org"
+      "lastLogin" : "Mon May 28 2018 17:39:24 GMT-0700",
+      "photoURL" : "./paul.jpg",
+      "username" : "Muad'Dib"
     }
   }
 }

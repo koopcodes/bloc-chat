@@ -87,7 +87,7 @@ class MessageList extends Component {
 					))}
 				</tbody>
 				<form id="create-message" onSubmit={ (e) => { e.preventDefault(); this.createMessage(this.state.newMessageText); } }>
-					<input type="textarea" value={ this.state.newMessageText } onChange={ this.handleChange.bind(this) }  name="newMessageText" placeholder="Say something" id='message-box' />
+					<textarea autofocus required rows="3" cols="40" form="create-message" value={ this.state.newMessageText } onChange={ this.handleChange.bind(this) }  name="newMessageText" placeholder="What's on your mind?" id='message-box' />
 					<input type='submit' id='message-submit'/>
 				</form>
 				<div ref={thisDiv => (this.bottomOfMessages = thisDiv)} />
