@@ -5,6 +5,8 @@ import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
 import MessageList from "./components/MessageList.js";
 import User from "./components/User.js";
+import Presence from "./components/Presence.jsx";
+// import defaultUserImage from "./img/defaultUser100.png";
 
 var config = {
 	apiKey: "AIzaSyAKGIi6kUifZBMmKS5C3b7zt0d9FirZO1k",
@@ -21,12 +23,18 @@ class App extends Component {
 		super(props);
 		this.state = {
 			activeRoom: null,
-			user: null,
+			user: null
 		};
+		this.pickActiveRoom = this.pickActiveRoom.bind(this);
+		this.setUser = this.setUser.bind(this);
 	}
 
 	pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
+		// const userRef = firebase.database().ref("presence/" + this.state.user.username);
+		// const roomKey = room === "" ? "" : room.key;
+		// const roomName = room === "" ? "" : room.name;
+		// userRef.update({ currentRoom: roomKey, roomName: roomName });
 	}
 
 	setUser(user) {
@@ -34,7 +42,6 @@ class App extends Component {
 	}
 
 	render() {
-
 		return (
 			<div className="App">
 				<header className="App-header">
@@ -46,12 +53,13 @@ class App extends Component {
 				</header>
 				<aside id="sidebar">
 					<div id="logo" />
+					<Presence firebase={firebase} user={this.state.user} />
 					<div id="slogan">Chat Rooms</div>
 					<RoomList
 						firebase={firebase}
 						activeRoom={this.state.activeRoom}
 						pickActiveRoom={this.pickActiveRoom.bind(this)}
-						user={this.state.user }
+						user={this.state.user}
 					/>
 					<nav />
 				</aside>

@@ -34,7 +34,7 @@ class User extends Component {
 				<p id="avatar">
 					<img src={this.props.user ? this.props.user.photoURL : defaultUserImage} alt="user" />
 				</p>
-				<p id="user-name">{this.props.user ? 'Welcome ' + this.props.user.displayName.split(' ')[0] + '!' : 'Guest'}</p>
+				<p id="user-name">{this.props.user ? 'Welcome ' + this.props.user + '!' : 'Guest'}</p>
 				<p id="sign-in-out">
 					<input
 						type="button"
