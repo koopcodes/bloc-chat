@@ -5,7 +5,7 @@ import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
 import MessageList from "./components/MessageList.js";
 import User from "./components/User.js";
-import Presence from "./components/Presence.jsx";
+import Presence from "./components/Presence.js";
 // import defaultUserImage from "./img/defaultUser100.png";
 
 var config = {
@@ -31,10 +31,6 @@ class App extends Component {
 
 	pickActiveRoom(room) {
 		this.setState({ activeRoom: room });
-		// const userRef = firebase.database().ref("presence/" + this.state.user.username);
-		// const roomKey = room === "" ? "" : room.key;
-		// const roomName = room === "" ? "" : room.name;
-		// userRef.update({ currentRoom: roomKey, roomName: roomName });
 	}
 
 	setUser(user) {
