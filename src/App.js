@@ -5,7 +5,7 @@ import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
 import MessageList from "./components/MessageList.js";
 import User from "./components/User.js";
-import Presence from "./components/Presence.js";
+// import Presence from "./components/Presence.js";
 // import defaultUserImage from "./img/defaultUser100.png";
 
 var config = {
@@ -49,12 +49,12 @@ class App extends Component {
 				</header>
 				<aside id="sidebar">
 					<div id="logo" />
-					<Presence firebase={firebase} user={this.state.user} />
-					<div id="slogan">Chat Rooms</div>
+					{/* <Presence firebase={firebase} user={this.state.user} /> */}
+					{/* <div id="slogan">Chat Rooms</div> */}
 					<RoomList
 						firebase={firebase}
 						activeRoom={this.state.activeRoom}
-						pickActiveRoom={this.pickActiveRoom.bind(this)}
+						pickActiveRoom={this.pickActiveRoom}
 						user={this.state.user}
 					/>
 					<nav />

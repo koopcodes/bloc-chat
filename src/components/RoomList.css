@@ -3,6 +3,7 @@
   color: white;
   font-size: 300%;
   text-align: left;
+
 }
 
 input[type="button"] {
@@ -10,7 +11,7 @@ input[type="button"] {
   color: #222;
   display: inline-block;
   font: Consolas, sans-serif;
-  font-size: 50%;
+  font-size: 40%;
   padding: 14px;
   /* background: url('./../img/defaultUser100.png') repeat-x center #ffcc00; */
   background-color: #FFFFFF;
@@ -23,6 +24,7 @@ input[type="button"] {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
   cursor: pointer;
+
 }
 
 input[type="button"]:hover {
@@ -33,4 +35,11 @@ input[type="button"]:hover {
 .active {
 	background-color: #222;
 	color:rgba(49, 177, 252, 0.8);;
+}
+
+div#active-room-diplay {
+    font-size: 100%;
+		margin: 0 0 20px 0;
+		border-style: solid;
+		background: rgba(49, 177, 252, 0.8);;
 }

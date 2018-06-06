@@ -47,9 +47,9 @@ class MessageList extends Component {
 			content: newMessageText,
 			sentAt: Date(),
 			roomId: this.props.activeRoom.key,
-			username: this.props.user ? this.props.user.displayName : 'Anonymous',
+			username: this.props.user ? this.props.user.displayName : 'Guest',
 			email: this.props.user ? this.props.user.email : '',
-			displayName: this.props.user ? this.props.user.displayName : 'Anonymous',
+			displayName: this.props.user ? this.props.user.displayName : 'Guest',
 			photoURL: this.props.user ? this.props.user.photoURL : defaultUserImage,
 		});
 		this.setState({ newMessageText: '' });
@@ -70,7 +70,6 @@ class MessageList extends Component {
 	render() {
 		return (
 			<table id="message-component">
-				<caption className="active-room">Room: {this.props.activeRoom ? this.props.activeRoom.name : ''}</caption>
 				<tbody id="message-list">
 					<tr>
 						<th>User</th>
@@ -87,7 +86,7 @@ class MessageList extends Component {
 					))}
 				</tbody>
 				<form id="create-message" onSubmit={ (e) => { e.preventDefault(); this.createMessage(this.state.newMessageText); } }>
-					<textarea autofocus required rows="3" cols="40" form="create-message" value={ this.state.newMessageText } onChange={ this.handleChange.bind(this) }  name="newMessageText" placeholder="What's on your mind?" id='message-box' />
+					<textarea autoFocus required rows="3" cols="40" form="create-message" value={ this.state.newMessageText } onChange={ this.handleChange.bind(this) }  name="newMessageText" placeholder="What's on your mind?" id='message-box' />
 					<input type='submit' id='message-submit'/>
 				</form>
 				<div ref={thisDiv => (this.bottomOfMessages = thisDiv)} />
