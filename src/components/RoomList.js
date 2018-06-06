@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './RoomList.css';
-import defaultUserImage from './../img/defaultUser100.png';
 
 class RoomList extends Component {
 	constructor(props) {
@@ -31,12 +30,18 @@ class RoomList extends Component {
 		}
 	}
 
-	deleteRoom(roomKey) {
-		const room = this.props.firebase.database().ref('rooms/' + roomKey);
-		const roomMessages = this.props.firebase.database().ref('messages/' + roomKey);
-		room.remove();
-		roomMessages.remove();
-		this.props.activeRoom('');
+	deleteRoom(activeRoom) {
+		const roomToDelete = this.props.firebase.database().ref('rooms/' + activeRoom.key);
+		roomToDelete.remove();
+		const messagesToDelete = this.props.firebase.database().ref('messages/');
+
+		for (var i = 0; i < messagesToDelete.length; i++) {
+			if (messagesToDelete[i].roomId === activeRoom.key) {
+				console.log(messagesToDelete[i]);
+				messagesToDelete[i].remove();
+			}
+		}
+		this.setState({ activeRoom: '' });
 	}
 
 	handleChange(e) {
@@ -59,7 +64,9 @@ class RoomList extends Component {
 	render() {
 		return (
 			<section id="room-component">
-				<div id="active-room-diplay">Current Room: {this.props.activeRoom ? this.props.activeRoom.name : ''}</div>
+				<div id="active-room-diplay">Current Room: {this.props.activeRoom ? this.props.activeRoom.name : ''}
+					<button type='submit' onClick={() => this.deleteRoom(this.props.activeRoom)}>Delete Room</button>
+				</div>
 				<form
 					id="addRoomForm"
 					onSubmit={e => {

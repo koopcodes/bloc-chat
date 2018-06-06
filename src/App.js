@@ -49,8 +49,6 @@ class App extends Component {
 				</header>
 				<aside id="sidebar">
 					<div id="logo" />
-					{/* <Presence firebase={firebase} user={this.state.user} /> */}
-					{/* <div id="slogan">Chat Rooms</div> */}
 					<RoomList
 						firebase={firebase}
 						activeRoom={this.state.activeRoom}
