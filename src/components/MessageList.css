@@ -1,22 +1,23 @@
 #message-component {
 	display: grid;
-	background: rgba(49, 177, 252, 0.8);
+	background: lightskyblue;
 }
 
 .user-name {
 	float: left;
-	width: 105px;
-	height: 125px;
+	width: 106px;
+	height: 126px;
 }
 
 .sentAt {
 	float: right;
-	width: 105px;
-	height: 125px;
+	width: 120px;
+	height: 126px;
 }
 
 .content {
 	width: 100%;
+	height: 125px;
 }
 
 table,
@@ -24,7 +25,9 @@ tbody,
 th,
 tr,
 td {
-	border-style: groove;
+	border-style: solid;
+	border-color: white;
+	border-spacing: 0px;
 }
 
 caption {
@@ -54,7 +57,6 @@ textarea {
 	border-radius: 4px;
 	font-size: 16px;
 	height: 68px;
-
 }
 
 #create-message {

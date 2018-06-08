@@ -16,16 +16,22 @@ class User extends Component {
 
 	signIn() {
 		const provider = new this.props.firebase.auth.GoogleAuthProvider();
-		this.props.firebase.auth().signInWithPopup(provider).then(result => {
-			const user = result.user;
-			this.props.setUser(user);
-		});
+		this.props.firebase
+			.auth()
+			.signInWithPopup(provider)
+			.then(result => {
+				const user = result.user;
+				this.props.setUser(user);
+			});
 	}
 
 	signOut() {
-		this.props.firebase.auth().signOut().then(() => {
-			this.props.setUser(null);
-		});
+		this.props.firebase
+			.auth()
+			.signOut()
+			.then(() => {
+				this.props.setUser(null);
+			});
 	}
 
 	render() {
@@ -38,8 +44,8 @@ class User extends Component {
 				<p id="sign-in-out">
 					<input
 						type="button"
-						value={this.props.user ? 'Sign Out' : 'Please Sign In'}
-						onClick={this.props.user ? this.signOut : this.signIn }
+						value={this.props.user ? 'Sign Out' : 'Sign In to Create or Delete'}
+						onClick={this.props.user ? this.signOut : this.signIn}
 					/>
 				</p>
 			</span>

@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	background: #222;
 }
 
 .App-logo {
@@ -9,14 +10,16 @@
 
 .App-header {
 	background-color: #222;
-	height: 5%;
-	padding: 20px;
+	height: 208px;
+	box-sizing: border-box;
+	padding: 15px;
 	color: white;
 	line-height: 0;
 }
 
 .App-title {
 	font-size: 400%;
+	text-align: center;
 }
 
 .App-intro {
@@ -34,7 +37,6 @@
 
 aside {
 	float: left;
-	padding: 5px;
 }
 
 #sidebar {
@@ -51,9 +53,9 @@ aside {
 	float: left;
 	height: 150px;
 	width: 150px;
-	margin-left: 15px;
+	margin-left: 30px;
 }
 
-body {
-	background: rgba(49, 177, 252, 0.8);
+#main {
+	background: #222;
 }

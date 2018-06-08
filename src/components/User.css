@@ -2,3 +2,10 @@ img {
 	height: 100px;
 	width: auto;
 }
+
+
+.user-name img {
+	height: 100px;
+	width: auto;
+	margin-top: 3px;
+}

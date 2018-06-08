@@ -17,6 +17,9 @@ class RoomList extends Component {
 			room.key = snapshot.key;
 			this.setState({ rooms: this.state.rooms.concat(room) });
 		});
+		this.roomsRef.on('child_removed', snapshot => {
+			this.setState({ rooms: this.state.rooms.filter(room => room.key !== snapshot.key) });
+		});
 	}
 
 	addNewRoom(newRoomName) {
@@ -33,22 +36,22 @@ class RoomList extends Component {
 	deleteRoom(activeRoom) {
 		const roomToDelete = this.props.firebase.database().ref('rooms/' + activeRoom.key);
 		roomToDelete.remove();
-		const messagesToDelete = this.props.firebase.database().ref('messages/');
-
-		for (var i = 0; i < messagesToDelete.length; i++) {
-			if (messagesToDelete[i].roomId === activeRoom.key) {
-				console.log(messagesToDelete[i]);
-				messagesToDelete[i].remove();
-			}
-		}
-		this.setState({ activeRoom: '' });
+		this.setState({ activeRoom: null });
+		console.log(activeRoom);
+		//const messagesToDelete = this.props.firebase.database().ref('messages/');
+		// for (var i = 0; i < messagesToDelete.length; i++) {
+		// 	if (messagesToDelete[i].roomId === activeRoom.key) {
+		// 		console.log(messagesToDelete[i]);
+		// 		messagesToDelete[i].remove();
+		// 	}
+		// }
 	}
 
 	handleChange(e) {
 		e.preventDefault();
 		this.setState({
 			[e.target.name]: e.target.value,
-			createdBy: this.props.user.displayName,
+			createdBy: this.props.user ? this.props.user.displayName : 'Guest',
 		});
 	}
 
@@ -64,30 +67,19 @@ class RoomList extends Component {
 	render() {
 		return (
 			<section id="room-component">
-				<div id="active-room-diplay">Current Room: {this.props.activeRoom ? this.props.activeRoom.name : ''}
-					<button type='submit' onClick={() => this.deleteRoom(this.props.activeRoom)}>Delete Room</button>
+				<div id="active-room-diplay">
+					<div>Current Room: {this.props.activeRoom ? this.props.activeRoom.name : 'Select a Room'}</div>
+					{this.props.user !== null ? (
+						<button type="submit" onClick={() => this.deleteRoom(this.props.activeRoom)}>
+							Delete Room
+						</button>
+					) : (
+						<div className="no-delete" />
+					)}
 				</div>
-				<form
-					id="addRoomForm"
-					onSubmit={e => {
-						e.preventDefault();
-						this.addNewRoom(this.state.newRoomName);
-					}}>
-					<fieldset>
-						<legend>Create New Chat Room</legend>
-						<input
-							type="text"
-							value={this.state.newRoomName}
-							name="newRoomName"
-							placeholder="New Room Name"
-							onChange={this.handleChange.bind(this)}
-						/>
-						<input type="submit" value="+" />
-					</fieldset>
-				</form>
 				<ul id="room-list">
 					{this.state.rooms.map(room => (
-						<li
+						<ul
 							key={room.key}
 							className={this.props.activeRoom && this.props.activeRoom.key === room.key ? 'active' : 'not-active'}>
 							<input
@@ -96,9 +88,31 @@ class RoomList extends Component {
 								className="room-name"
 								value={room.name}
 							/>
-						</li>
+						</ul>
 					))}
 				</ul>
+				{this.props.user !== null ? (
+					<form
+						id="addRoomForm"
+						onSubmit={e => {
+							e.preventDefault();
+							this.addNewRoom(this.state.newRoomName);
+						}}>
+						<fieldset>
+							<legend>Create New Chat Room</legend>
+							<input
+								type="text"
+								value={this.state.newRoomName}
+								name="newRoomName"
+								placeholder="New Room Name"
+								onChange={this.handleChange.bind(this)}
+							/>
+							<input type="submit" value="+" />
+						</fieldset>
+					</form>
+				) : (
+					<div className="no-create" />
+				)}
 			</section>
 		);
 	}
