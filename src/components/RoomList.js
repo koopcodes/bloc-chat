@@ -16,6 +16,7 @@ class RoomList extends Component {
 			const room = snapshot.val();
 			room.key = snapshot.key;
 			this.setState({ rooms: this.state.rooms.concat(room) });
+			if (this.state.newRoomName) { this.props.pickActiveRoom(room); }
 		});
 		this.roomsRef.on('child_removed', snapshot => {
 			this.setState({ rooms: this.state.rooms.filter(room => room.key !== snapshot.key) });
@@ -34,17 +35,11 @@ class RoomList extends Component {
 	}
 
 	deleteRoom(activeRoom) {
-		const roomToDelete = this.props.firebase.database().ref('rooms/' + activeRoom.key);
-		roomToDelete.remove();
-		this.setState({ activeRoom: null });
-		console.log(activeRoom);
-		//const messagesToDelete = this.props.firebase.database().ref('messages/');
-		// for (var i = 0; i < messagesToDelete.length; i++) {
-		// 	if (messagesToDelete[i].roomId === activeRoom.key) {
-		// 		console.log(messagesToDelete[i]);
-		// 		messagesToDelete[i].remove();
-		// 	}
-		// }
+		if (this.validateUser()) {
+			const roomToDelete = this.props.firebase.database().ref('rooms/' + activeRoom.key);
+			roomToDelete.remove();
+		}
+		this.props.pickActiveRoom(null);
 	}
 
 	handleChange(e) {
@@ -58,6 +53,14 @@ class RoomList extends Component {
 	validateRoomName(newRoomName) {
 		const newRoomLength = newRoomName.trim().length;
 		if (newRoomLength > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	validateUser() {
+		if (this.props.user.displayName === this.props.activeRoom.createdBy) {
 			return true;
 		} else {
 			return false;

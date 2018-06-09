@@ -72,9 +72,9 @@ class MessageList extends Component {
 			<table id="message-component">
 				<tbody id="message-list">
 					<tr>
-						<th>User</th>
-						<th>Message</th>
-						<th>Sent</th>
+						<th id='user-message-header'>User</th>
+						<th id='message-message-header'>Message</th>
+						<th id='sent-message-header'>Sent</th>
 					</tr>
 					{this.state.activeRoomMessages.map(message => (
 						<tr key={message.key}>
