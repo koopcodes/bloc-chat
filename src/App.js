@@ -40,26 +40,25 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<span id="user">
-						<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
-					</span>
+				<div className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Koop Chat</h1>
-				</header>
-				<aside id="sidebar">
-					<div id="logo" />
-					<RoomList
-						firebase={firebase}
-						activeRoom={this.state.activeRoom}
-						pickActiveRoom={this.pickActiveRoom}
-						user={this.state.user}
-					/>
-					<nav />
-				</aside>
-				<span id="main">
+				</div>
+				<div id="user">
+					<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
+				</div>
+				<div id="sidebar">
+				<RoomList
+					firebase={firebase}
+					activeRoom={this.state.activeRoom}
+					pickActiveRoom={this.pickActiveRoom}
+					user={this.state.user}
+				/>
+				<nav />
+				</div>
+				<div id="main">
 					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} user={this.state.user} />
-				</span>
+				</div>
 			</div>
 		);
 	}

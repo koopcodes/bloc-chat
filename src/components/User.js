@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './User.css';
 import defaultUserImage from './../img/defaultUser100.png';
 
 class User extends Component {
@@ -37,17 +36,17 @@ class User extends Component {
 	render() {
 		return (
 			<span id="user-display">
-				<p id="avatar">
+				<div id="avatar">
 					<img src={this.props.user ? this.props.user.photoURL : defaultUserImage} alt="user" />
-				</p>
-				<p id="user-name">{this.props.user ? 'Welcome ' + this.props.user.displayName.split(' ')[0] + '!' : 'Guest'}</p>
-				<p id="sign-in-out">
+				</div>
+				<div id="user-name">{this.props.user ? 'Welcome ' + this.props.user.displayName.split(' ')[0] + '!' : 'Guest'}</div>
+				<div id="sign-in-out">
 					<input
 						type="button"
 						value={this.props.user ? 'Sign Out' : 'Sign In to Create or Delete'}
 						onClick={this.props.user ? this.signOut : this.signIn}
 					/>
-				</p>
+				</div>
 			</span>
 		);
 	}
