@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import "./App.css";
-import * as firebase from "firebase";
 import RoomList from "./components/RoomList.js";
 import MessageList from "./components/MessageList.js";
 import User from "./components/User.js";
-// import Presence from "./components/Presence.js";
+import "./App.css";
+import * as firebase from "firebase";
 // import defaultUserImage from "./img/defaultUser100.png";
 
 var config = {
@@ -23,7 +22,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			activeRoom: null,
-			user: null
+			user: null,
 		};
 		this.pickActiveRoom = this.pickActiveRoom.bind(this);
 		this.setUser = this.setUser.bind(this);
@@ -48,13 +47,13 @@ class App extends Component {
 					<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
 				</div>
 				<div id="sidebar">
-				<RoomList
-					firebase={firebase}
-					activeRoom={this.state.activeRoom}
-					pickActiveRoom={this.pickActiveRoom}
-					user={this.state.user}
-				/>
-				<nav />
+					<RoomList
+						firebase={firebase}
+						activeRoom={this.state.activeRoom}
+						pickActiveRoom={this.pickActiveRoom}
+						user={this.state.user}
+					/>
+					<nav />
 				</div>
 				<div id="main">
 					<MessageList firebase={firebase} activeRoom={this.state.activeRoom} user={this.state.user} />
