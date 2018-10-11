@@ -70,6 +70,10 @@ body {
 	width: 100%;
 }
 
+.github-logo {
+	float: left;
+}
+
 html {
 	text-align: center;
 	width: 100%;

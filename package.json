@@ -2,6 +2,7 @@
   "name": "bloc-chat",
   "version": "0.1.0",
   "private": true,
+	"homepage": "https://koop-chat.firebaseapp.com/",
   "dependencies": {
     "firebase": "^5.0.2",
     "react": "^16.3.2",
