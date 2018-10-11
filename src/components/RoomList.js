@@ -73,7 +73,7 @@ class RoomList extends Component {
 			<div>
 				<section id="room-component">
 					<div id="active-room-diplay">
-						<div>Current Room: {this.props.activeRoom ? this.props.activeRoom.name : "Select a Room"}</div>
+						<div id="currentRoomText">Current Room: {this.props.activeRoom ? this.props.activeRoom.name : "Select a Room"}</div>
 						{this.props.user !== null ? (
 							<button type="submit" onClick={() => this.deleteRoom(this.props.activeRoom)}>
 								Delete Room

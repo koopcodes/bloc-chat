@@ -60,6 +60,10 @@ body {
 
 #create-message {
 	display: flex;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 .content {
@@ -149,7 +153,9 @@ input.room-name:hover {
 
 #main {
 	background: #222;
-	width: 100%;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #message-component {
@@ -184,11 +190,11 @@ input.room-name:hover {
 }
 
 .sentAt {
-	column-width:100px;
+	column-width: 100px;
 }
 
 #sent-message-header {
-		column-width:100px;
+	column-width: 100px;
 }
 
 #sidebar {
@@ -224,6 +230,7 @@ table {
 }
 
 textarea {
+	width: 100%;
 	text-align: left;
 	box-sizing: border-box;
 	border: 2px solid #ccc;
@@ -247,7 +254,7 @@ th {
 }
 
 #user {
-	margin: 1em;
+	margin-bottom: 1em;
 	width: 96%;
 	margin-left: auto;
 	margin-right: auto;
@@ -259,12 +266,10 @@ th {
 	margin-right: auto;
 }
 #user-name {
-	float: left;
+	color: #ffffff;
+	width: 100%;
 	text-align: center;
-	margin: 1px;
-	width: 90px;
-	margin-right: auto;
-	max-width: 90px;
+	margin-bottom: 5px;
 }
 
 .user-name {
@@ -272,4 +277,37 @@ th {
 	width: 90px;
 	margin-right: auto;
 	max-width: 90px;
+}
+
+@media screen and (min-width: 400px) {
+    #user {
+        width: 75%;
+    }
+
+		#sidebar {
+			width: 75%;
+		}
+
+}
+
+@media screen and (min-width: 700px) {
+    #user {
+        width: 50%;
+    }
+
+		#sidebar {
+			width: 50%;
+		}
+
+}
+
+@media screen and (min-width: 1280px) {
+    #user {
+      width: 25%;
+    }
+
+		#sidebar {
+			width: 25%;
+		}
+
 }

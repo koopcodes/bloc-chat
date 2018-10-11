@@ -142,8 +142,6 @@ class MessageList extends Component {
 						<textarea
 							autoFocus
 							required
-							rows="3"
-							cols="40"
 							form="create-message"
 							value={this.state.newMessageText}
 							onChange={this.handleChange.bind(this)}
