@@ -42,6 +42,8 @@ class App extends Component {
 				<div className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Koop Chat</h1>
+					<p>A proof-of-concept chat app built with React using Google Authorization and a NoSQL Firebase database</p>
+					<a href="https://github.com/koopdev/bloc-chat" alt="Link to Source Code" target="_blank" rel="noopener noreferrer" className="github-link">Source Code</a>
 				</div>
 				<div id="user">
 					<User firebase={firebase} setUser={this.setUser.bind(this)} user={this.state.user} />
